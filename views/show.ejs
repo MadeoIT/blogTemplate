@@ -1,0 +1,13 @@
+<% include partials/header %>
+<div class="ui main text container segment">
+    <h1><%= foundPost.title %> </h1>
+    <img class="ui centered rounded image" src="<%= foundPost.image %>" alt="" srcset=""><br><br>
+    <p><%= foundPost.body %></p>
+</div>
+<div class="ui main text container segment">
+    <a class="ui button" type="submit" href="/blogs/<%= foundPost._id %>/edit">Edit</a>
+    <form action="/blogs/<%= foundPost._id %>?_method=DELETE" method="post">
+        <button class="ui red basic button">Delete</button>
+    </form>
+</div>
+<% include partials/footer %>
